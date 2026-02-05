@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FXConvert — Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+    <div class="bg-orb orb-c"></div>
+    <div class="bg-grid"></div>
+
+    <header class="topbar">
+      <div class="logo">
+        <span class="logo-mark">FX</span>
+        <span class="logo-text">Convert</span>
+      </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Rates</a>
+        <a href="#">API</a>
+        <a href="#">About</a>
+      </nav>
+      <button class="toggle" aria-label="Toggle theme">
+        <span class="toggle-dot"></span>
+      </button>
+    </header>
+
+    <main class="wrap">
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Global Converter</p>
+            <h1>Convert any currency in seconds</h1>
+            <p class="subtext">
+              Live FX rates across all supported world currencies.
+            </p>
+          </div>
+          <div class="badge">
+            <span class="pulse"></span>
+            Live
+          </div>
+        </div>
+
+        <div class="form">
+          <label class="field">
+            <span>Amount</span>
+            <input id="amount" type="number" min="0" step="0.01" value="1000" />
+          </label>
+
+          <div class="field-row">
+            <label class="field">
+              <span>From</span>
+              <div class="select-wrap">
+                <span id="fromFlag" class="flag">🌍</span>
+                <select id="fromCurrency"></select>
+              </div>
+            </label>
+
+            <button id="swapBtn" class="swap" title="Swap currencies">
+              ⇄
+            </button>
+
+            <label class="field">
+              <span>To</span>
+              <div class="select-wrap">
+                <span id="toFlag" class="flag">🌍</span>
+                <select id="toCurrency"></select>
+              </div>
+            </label>
+          </div>
+
+          <button id="convertBtn" class="cta">Convert</button>
+        </div>
+
+        <div class="result">
+          <div class="result-amount" id="result">—</div>
+          <div class="result-rate" id="rate">Choose currencies to convert.</div>
+        </div>
+
+        <div class="chart">
+          <div class="chart-meta">
+            <span>Weekly trend (demo)</span>
+            <span id="updated">Last updated: —</span>
+          </div>
+          <svg viewBox="0 0 280 90" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2f6bff" />
+                <stop offset="100%" stop-color="#9b3dff" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M10 70 C50 50, 80 60, 110 40 C140 20, 180 35, 210 25 C230 20, 250 30, 270 15"
+            />
+            <circle cx="270" cy="15" r="4" />
+          </svg>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="chip">$</div>
+        <div class="chip">€</div>
+        <div class="chip">₹</div>
+        <div class="chip">¥</div>
+        <div class="chip">₿</div>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
