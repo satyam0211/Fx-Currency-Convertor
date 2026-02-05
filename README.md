@@ -18,6 +18,16 @@ A responsive, glassmorphism-style currency converter that fetches live FX rates 
 1. Open `index.html` in your browser.
 2. Enter an amount, choose currencies, and click **Convert**.
 
+## Live Demo (GitHub Pages)
+1. Go to your repo on GitHub.
+2. Open **Settings** → **Pages**.
+3. Under **Build and deployment**, choose:
+   - **Source**: `Deploy from a branch`
+   - **Branch**: `main` / `/ (root)`
+4. Save and wait 1–2 minutes.
+5. Your site will be live at:
+   - `https://satyam0211.github.io/Fx-Currency-Convertor/`
+
 ## Project Structure
 - `index.html` — App layout
 - `style.css` — Styling and animations
@@ -29,3 +39,4 @@ A responsive, glassmorphism-style currency converter that fetches live FX rates 
 
 ## Screenshot
 Add a screenshot of your UI here if desired.
+Suggested path: `assets/screenshot.png`
